@@ -21,7 +21,8 @@
     "url": "https://github.com/osirisguitar/SlackQOTD/issues"
   },
   "dependencies": {
-    "express": "~4.4.1"
+    "express": "~4.4.1",
+    "file-encryptor": "~0.1.0"
   },
   "engines": {
     "node": "0.10.x"
