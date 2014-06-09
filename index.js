@@ -29,7 +29,7 @@ var getQuote = function(quotes) {
 
 var quotes = null;
 
-app.get("/", function(req, res) {
+app.post("/", function(req, res) {
 	if (!quotes) {
 		quotes = readQuotes();
 	}
