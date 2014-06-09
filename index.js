@@ -21,8 +21,7 @@ var getQuote = function(quotes) {
 	if (quotes) {
 		var lines = quotes.length;
 		var randomEntryIndex = Math.floor(Math.random() * lines);
-		console.log("Returning quote", randomEntryIndex, "out of", lines);
-		return quotes[randomEntryIndex].replace(/\n/gm, "<br>");
+		return quotes[randomEntryIndex];
 	} else {
 		return "Quote file could not be read. I'll be back";
 	}
@@ -36,7 +35,7 @@ app.get("/", function(req, res) {
 	}
 
 	var quote = getQuote(quotes);
-	res.send(quote);
+	res.json({ "text": quote });
 });
 
 var port = process.env.PORT || 4321;
