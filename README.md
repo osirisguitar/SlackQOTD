@@ -1,0 +1,1 @@
+Slack bot for quote of the day from text file
