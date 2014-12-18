@@ -9,6 +9,8 @@ var app = express();
 var readQuotes = function() {
 	var encryptedFile = fs.readFileSync('./encrypted_quotes.dat');
 
+	console.log('key', key);
+
 	var decipher = crypto.createDecipher('aes192', key);
 	var quoteFile = decipher.update(encryptedFile, 'binary');
 
